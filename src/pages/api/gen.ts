@@ -5,6 +5,8 @@ interface Data {
   name: string;
 }
 
+const HF_TOKEN = process.env.HF_TOKEN;
+
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
@@ -27,7 +29,7 @@ async function query(data: { inputs: string }) {
     "https://api-inference.huggingface.co/models/gsdf/Counterfeit-V2.5",
     {
       headers: {
-        Authorization: "Bearer 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",
+        Authorization: `Bearer ${HF_TOKEN}`,
       },
       method: "POST",
       body: JSON.stringify(data),
