@@ -7,5 +7,6 @@ module.exports = defineConfig({
     "next/core-web-vitals",
     "@debbl/eslint-config-react",
     "@debbl/eslint-config-prettier",
+    "@debbl/eslint-config-tailwindcss",
   ],
 });

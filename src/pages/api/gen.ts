@@ -10,6 +10,7 @@ export default async function handler(
   res: NextApiResponse<Data>
 ) {
   const { inputs } = req.body;
+
   if (!inputs) res.status(403);
 
   const blob = await query({ inputs });
@@ -20,6 +21,7 @@ export default async function handler(
   });
   res.write(Buffer.from(await blob.arrayBuffer()));
 }
+
 async function query(data: { inputs: string }) {
   const response = await fetch(
     "https://api-inference.huggingface.co/models/gsdf/Counterfeit-V2.5",
