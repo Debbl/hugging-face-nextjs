@@ -35,7 +35,7 @@ export default function Home() {
             value={input}
             onChange={(e) => setInput(e.target.value)}
             className="w-80 border px-3 py-1"
-            placeholder="请输入 prompt"
+            placeholder="请输入 Prompt"
           />
           <button
             className={`w-40 rounded border px-8 py-1 shadow ${
