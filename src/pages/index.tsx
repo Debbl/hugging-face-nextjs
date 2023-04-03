@@ -46,6 +46,9 @@ export default function Home() {
 
   return (
     <div>
+      <h3 className="py-2 text-center">
+        https://huggingface.co/gsdf/Counterfeit-V2.5
+      </h3>
       <div className="mx-auto mt-12 w-80">
         <div className="flex flex-col gap-y-6">
           <label>
