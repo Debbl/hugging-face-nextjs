@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import { useRequest } from "ahooks";
+import Footer from "~/components/Footer";
 
 async function getImage(inputs: string) {
   const response = await fetch("/api/gen", {
@@ -116,6 +117,7 @@ export default function Home() {
           )}
           {data && !loading && <Image src={data} alt="" unoptimized fill />}
         </div>
+        <Footer />
       </div>
     </div>
   );
