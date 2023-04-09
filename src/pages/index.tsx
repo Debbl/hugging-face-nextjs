@@ -38,7 +38,6 @@ export default function Home() {
     },
     {
       manual: true,
-      debounceWait: 1000,
     }
   );
 
